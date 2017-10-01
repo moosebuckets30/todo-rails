@@ -1,6 +1,7 @@
 class TodosController < ApplicationController 
     def index
-        @code_word= "#{params[:code]} #{params[:word]}"
+       # @code_word= "#{params[:code]} #{params[:word]}"
+        @todos=Todo.all
        
     end
     def create
@@ -27,7 +28,7 @@ class TodosController < ApplicationController
             complete: params[:complete]
         )
         
-         redirect_to "/todos/#{todo.id}"   
+         redirect_to "/todos/#{todo.id}"
     end
 end
         

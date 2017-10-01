@@ -1,15 +1,22 @@
     <h1>To-do list</h1>
     <img src="http://static.wixstatic.com/media/405360_4ee4fd1330d54a009cc27c56e4978422~mv2.gif" height="250" width="250">
    <ul>
-       <li> <a href="/todos/1">Do my daily pushups</a> 1st item</li>
-       <li> <a href="/todos/2">Eat breakfast</a> 2nd item</li>
-       <li> <a href="/todos/3">Go to the basketball court</a> 3rd item</li> 
-        <li> <a href="/todos/4">Eat lunch</a> 4th item</li> 
-         <li> <a href="/todos/5">Do homework</a> 5th item</li> 
-        <li> <a href="todos/6">Go to friends house</a> 6th item</li>
-       <li> <a href="todos/7">Eat dinner</a> 7th item</li>
+       <!--<li> <a href="/todos/1">Do my daily pushups</a> 1st item</li>-->
+       <!--<li> <a href="/todos/2">Eat breakfast</a> 2nd item</li>-->
+       <!--<li> <a href="/todos/3">Go to the basketball court</a> 3rd item</li> -->
+       <!-- <li> <a href="/todos/4">Eat lunch</a> 4th item</li> -->
+       <!--  <li> <a href="/todos/5">Do homework</a> 5th item</li> -->
+       <!-- <li> <a href="todos/6">Go to friends house</a> 6th item</li>-->
+       <!--<li> <a href="todos/7">Eat dinner</a> 7th item</li>-->
+        <% @todos.each do |todo| %>
+        <li><a href="/todos/<%=todo.id%>">
+          <%=todo.name%>
+          </a></li>
+          <%end%>
+       
        
    </ul>
+
     <input type="submit" value="Submit">
     
      Code Word<%=@code_word%>
