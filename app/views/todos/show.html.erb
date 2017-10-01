@@ -6,6 +6,18 @@
 <p><%= @todo.duration%> mins</p>
 completed <%= @todo.complete%>
 
+ <form  action="/todos/<%=@todo.id%>"method="POST" method="POST">
+  <input type= "hidden" name="authenticity_token" value= "<%= form_authenticity_token %>"/>
+  Name: <input type= "text" name="name" value="<%=@todo.name%>"/>
+  Description: <input type= "text" name="<%=@todo.description%>"/>
+  Estimated time: <input type="number" name="<%=@todo.duration%>"/>
+  Completed: <input type="checkbox" name="<%=@todo.complete ? 'checked': '' %>"/>
+  
+  <input type="submit"/>
+            
+            
+ </form>
+
  
 
  
