@@ -13,4 +13,15 @@
     <input type="submit" value="Submit">
     
      Code Word<%=@code_word%>
+ <h3> Add new todo</h3>
+ <form  action="/todos" method="POST">
+  <input type= "hidden" name="authenticity_token" value= "<%= form_authenticity_token %>"/>
+  Name: <input type= "text" name="name"/>
+  Description: <input type= "text" name="description"/>
+  Estimated time: <input type="number" name="duration"/>
+  Completed: <input type="checkbox" name="complete"/>
+  <input type="submit"/>
+            
+            
+ </form>
  
